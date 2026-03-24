@@ -171,12 +171,20 @@ body {
 
 /* Ajuste para Celulares (Mobile First) */
 .rsvp-wrapper {
-    position: absolute;
-    bottom: 0; /* Colado na base do body */
-    left: 0;
-    width: 100%; /* Ocupa toda a largura */
-    padding: 15px 0;
+   .rsvp-wrapper {
+    /* Remova o position: absolute e o bottom: 0 */
+    position: relative; 
+    width: 100%;
+    
+    /* Espaçamento entre o botão e o que vem DEPOIS dele (o cronômetro) */
+    margin-bottom: 30px; 
+    
+    /* Espaçamento interno opcional */
+    padding: 10px 0;
+    
     z-index: 1000;
+    background: transparent; /* Garante que a "sombra" suma */
+}
 }
 
 @media (max-width: 480px) {
