@@ -1,5 +1,5 @@
 // 1. CONFIGURAÇÕES INICIAIS
-const DATA_EVENTO = new Date("Sep 13, 2026 18:00:00").getTime();
+const DATA_EVENTO = new Date("Sep 13, 2026 14:30:00").getTime();
 
 // Mapeamento dos elementos (garantindo que o DOM existe)
 const elementos = {
