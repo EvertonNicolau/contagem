@@ -59,7 +59,6 @@ body {
     top: 20px;
     right: 20px;
     background: var(--branco-glass); /* Já é transparente */
-    backdrop-filter: blur(10px);
     padding: 10px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -177,7 +176,6 @@ body {
     left: 0;
     width: 100%; /* Ocupa toda a largura */
     padding: 15px 0;
-    background: linear-gradient(to top, var(--bege-claro) 60%, rgba(255,255,255,0)); /* Efeito "sumindo" suave */
     z-index: 1000;
 }
 
