@@ -24,7 +24,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    display: flex;
+    display: block;
+    padding-top: 120px;
     flex-direction: column;
     align-items: center;
     /* Alterado de center para flex-end para descer o conteúdo */
@@ -33,7 +34,7 @@ body {
     margin: 0;
     
     /* Adicionamos um respiro no fundo para o botão não colar no rodapé */
-    padding-bottom: 80px; 
+    padding-bottom: 20px; 
 
     background-color: var(--bege-claro);
     background-size: cover;
@@ -43,6 +44,14 @@ body {
     
     transition: background-image 1.5s ease-in-out; 
     color: var(--verde-folha);
+}
+/* Ajuste no Container da Contagem */
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 140px); /* Ocupa quase a tela toda */
+    width: 100%;
+    align-items: center;
 }
 /* Widget do PIX */
 .pix-widget {
@@ -262,7 +271,10 @@ h2 {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-}
+    margin-bottom: 40px; /* Garante que ele fique perto do timer, mas acima do fim da tela */
+    width: 80%; /* No mobile, botões largos são melhores para clicar */
+    max-width: 300px;
+    }
 
 .btn-rsvp:hover {
     background-color: var(--marrom-terra);
@@ -352,8 +364,15 @@ input:focus, select:focus {
     right: 15px;
     bottom: 15px;
    }
-    #timer { gap: 8px;
-           justify-content: center;}
+   /* O PULO DO GATO: Empurrar o Timer para baixo */
+   #timer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: auto; /* ISSO empurra o timer para o máximo que der para baixo */
+    margin-bottom: 30px; /* Espaço entre o timer e o botão RSVP */
+   }
     .time-box {
         min-width: 80px;
         padding: 15px 5px;
