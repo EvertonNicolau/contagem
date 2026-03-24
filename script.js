@@ -59,6 +59,10 @@ if (elementos.btnConfirmar) {
             elementos.modal.style.display = "none";
         }
     };
+    // Garante que o modal sempre abra no topo se o formulário for longo
+document.getElementById('btn-confirmar').addEventListener('click', function() {
+    document.getElementById('modal-rsvp').scrollTop = 0;
+});
 }
 
 // 4. CARROSSEL DE BACKGROUND (Nova Estrutura de Pastas)
