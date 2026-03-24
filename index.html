@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva do Nosso Casamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/background/favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Contagem Regressiva - Nosso Casamento">
+    <meta property="og:description" content="Venha celebrar conosco! Faltam poucos dias.">
+    <meta property="og:image" content="assets/background/foto1.jpg">
+    <meta property="og:url" content="https://seusite.com">
+</head>
+<body>
+
+    <div class="pix-widget">
+        <p>Presente via PIX</p>
+        <img src="assets/QR Code.jpg" alt="QR Code Pix">
+        <button id="btn-copiar" onclick="copiarPix()">Copiar Chave</button>
+    </div>
+
+    <section class="countdown-container">
+
+
+        <div id="timer">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Dias</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Horas</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minutos</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+
+        <button id="btn-confirmar" class="btn-rsvp">Confirmar Presença</button>
+    </section>
+
+    <div id="modal-rsvp" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h3>Confirmar Presença</h3>
+            
+            <form action="https://formsubmit.co/SEU_EMAIL_AQUI@gmail.com" method="POST">
+                <input type="text" name="nome" placeholder="Seu Nome / Sua família" required>
+                
+                <select name="quantidade_pessoas" required>
+                    <option value="" disabled selected>Quantas pessoas?</option>
+                    <option value="1">Apenas eu</option>
+                    <option value="2">Eu e acompanhante</option>
+                    <option value="família">Eu e Família</option>
+                </select>
+
+                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nova Confirmação de Casamento!">
+
+                <button type="submit" class="btn-enviar">Enviar Confirmação</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="spotify-wrapper">
+       <a href="https://open.spotify.com/playlist/2McNYwwJByTASsEhnv0WMs?si=x2OodVVXSMqxARVblqOY2g" target="_blank" class="spotify-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" class="spotify-icon">
+            <span class="spotify-text">Ouça nossa playlist!</span>
+       </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="carrossel.js"></script>
+    
+</body>
+</html>
