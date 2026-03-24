@@ -162,6 +162,16 @@ body {
 }
 
 /* Ajuste para Celulares (Mobile First) */
+.rsvp-wrapper {
+    position: absolute;
+    bottom: 0; /* Colado na base do body */
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    padding: 15px 0;
+    background: linear-gradient(to top, var(--bege-claro) 60%, rgba(255,255,255,0)); /* Efeito "sumindo" suave */
+    z-index: 1000;
+}
+
 @media (max-width: 480px) {
     .spotify-wrapper {
         bottom: 15px;
